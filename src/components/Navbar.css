@@ -51,6 +51,7 @@
   flex-direction: column;
   gap: 4px;
   cursor: pointer;
+  z-index: 1100;
 }
 
 .bar {
