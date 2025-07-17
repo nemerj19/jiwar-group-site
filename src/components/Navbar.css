@@ -10,20 +10,20 @@
   top: 0;
   left: 0;
   width: 100%;
+  max-width: 100vw;
   height: 54px;
   z-index: 1000;
-  width: 100%;
-  max-width: 100vw; /* prevent overflow on small devices */
   overflow-x: hidden;
 }
 
+/* Logo styles */
 .logo {
   font-weight: bold;
   font-size: 1.1rem;
-  margin-right: 100px;
   text-decoration: none;
   color: white;
   white-space: nowrap;
+  margin-right: 0;
 }
 
 /* Desktop nav links */
@@ -65,11 +65,19 @@
 
 /* Responsive styles */
 @media (max-width: 768px) {
+  .navbar {
+    padding: 1rem 1.2rem;
+  }
+
+  .logo {
+    font-size: 1rem;
+  }
+
   .nav-links {
     position: fixed;
-    top: 54px; /* Match your actual navbar height */
+    top: 54px;
     left: 0;
-    width: 100%;
+    width: 100vw;
     height: calc(100vh - 54px);
     background-color: #630000;
     flex-direction: column;
@@ -83,16 +91,21 @@
   .nav-links.active {
     display: flex;
   }
+
   .hamburger {
     display: flex;
-    position: relative; /* ensure it's positioned correctly */
+    position: relative;
     z-index: 1100;
   }
-
-  .bar {
-    background-color: white;
-  }
 }
+
+/* Remove background from hamburger in final version */
 .hamburger {
-  background: rgba(255, 0, 0, 0.2); /* semi-transparent red for testing */
+  background: none;
+}
+
+/* Optional: Prevent horizontal scroll globally */
+body {
+  margin: 0;
+  overflow-x: hidden;
 }
