@@ -7,7 +7,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-color: rgb(195, 0, 0);
+  background-color: #c70000;
 }
 
 .hero::before {
@@ -29,14 +29,15 @@
   max-width: 700px;
   border-radius: 16px;
   margin-bottom: 10px;
-  font-size: 2rem; /* or larger, e.g., 3.5rem */
+  font-size: 1.8rem; /* or larger, e.g., 3.5rem */
   font-weight: bold;
   margin-bottom: 19px;
-  background-color: rgb(89, 10, 14);
+  background-color: rgb(98, 3, 8);
 }
 
 .hero-card p {
-  font-size: 1.25rem; /* optional: slightly increase subtitle */
+  font-size: 1rem; /* optional: slightly increase subtitle */
+  margin-top: 40px;
 }
 
 /* ...rest stays same */
